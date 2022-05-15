@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh;
-    width: 100%;
 }
 html{
     font-family: Arial, Helvetica, sans-serif;
@@ -86,3 +84,31 @@ p{
 .slider-control:hover .slider-button{
     background-color: aliceblue;
 }
+
+#radio-1:checked~.slider-control-1 .slider-button{
+    background-color: blue;
+}
+#radio-2:checked~.slider-control-2 .slider-button{
+    background-color: blue;
+}
+#radio-3:checked~.slider-control-3 .slider-button{
+    background-color: blue;
+}
+#radio-4:checked~.slider-control-4 .slider-button{
+    background-color: blue;
+}
+
+
+#radio-1:checked~.carousel>.slides>.slide-1{
+    margin-top: 0;
+}
+#radio-2:checked~.carousel>.slides>.slide-1{
+    margin-top: -75vh;
+}
+#radio-3:checked~.carousel>.slides>.slide-1{
+    margin-top: -150vh;
+}
+#radio-4:checked~.carousel>.slides>.slide-1{
+    margin-top: -225vh;
+}
+
