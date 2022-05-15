@@ -134,4 +134,23 @@ p{
     margin-top: -15vh;
 }
 
+@media  screen and (max-width: 768px) {
+    .slider-wrapper{
+        grid-template-areas: 
+        "slide"
+        "controls"
+        "text";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 1.5rem;
+    }
+    .quotation{
+        font-size: 1.5rem;
+    }
+    .slider-controls{
+        justify-content: center;
+    }
 
+
+    
+}
