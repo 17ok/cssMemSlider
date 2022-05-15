@@ -32,11 +32,14 @@ input{
     overflow: hidden;
 }
 .slides{
-    height: 400%;
+    width:400%;
+    display: flex;
+    flex-direction:row;
 }
 .slide{
    width: 50vw;
    height: 75vh;
+   transition: all 0.5s;
 }
 img{
     width:100%;
@@ -55,6 +58,7 @@ overflow: hidden;
 
 .quotation{
    color: white;
+   transition: all 0.5s;
 }
 p{
     height: 100%;
@@ -79,36 +83,55 @@ p{
     border: 0.1rem solid lightskyblue;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .slider-control:hover .slider-button{
     background-color: aliceblue;
 }
 
-#radio-1:checked~.slider-control-1 .slider-button{
-    background-color: blue;
-}
-#radio-2:checked~.slider-control-2 .slider-button{
-    background-color: blue;
-}
-#radio-3:checked~.slider-control-3 .slider-button{
-    background-color: blue;
-}
-#radio-4:checked~.slider-control-4 .slider-button{
-    background-color: blue;
+.slider-control:active .slider-button{
+    background-color: lightgreen;
 }
 
+
+#radio-1:checked~.slider-controls>.slider-control-1>.slider-button{
+    background-color: blue;
+}
+#radio-2:checked~.slider-controls>.slider-control-2>.slider-button{
+    background-color: blue;
+}
+#radio-3:checked~.slider-controls>.slider-control-3>.slider-button{
+    background-color: blue;
+}
+#radio-4:checked~.slider-controls>.slider-control-4>.slider-button{
+    background-color: blue;
+}
 
 #radio-1:checked~.carousel>.slides>.slide-1{
-    margin-top: 0;
+    margin-left: 0;
 }
 #radio-2:checked~.carousel>.slides>.slide-1{
-    margin-top: -75vh;
+    margin-left: -50vw;
 }
 #radio-3:checked~.carousel>.slides>.slide-1{
-    margin-top: -150vh;
+    margin-left: -100vw;
 }
 #radio-4:checked~.carousel>.slides>.slide-1{
-    margin-top: -225vh;
+    margin-left: -150vw;
 }
+
+#radio-1:checked~.text-wrapper>.quotations>.quotation-1{
+    margin-top: 0;
+}
+#radio-2:checked~.text-wrapper>.quotations>.quotation-1{
+    margin-top: -5vh;
+}
+#radio-3:checked~.text-wrapper>.quotations>.quotation-1{
+    margin-top: -10vh;
+}
+#radio-4:checked~.text-wrapper>.quotations>.quotation-1{
+    margin-top: -15vh;
+}
+
 
